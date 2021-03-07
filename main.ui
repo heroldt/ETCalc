@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>522</width>
+    <height>452</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ET Calc [alpha] (c)2021</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>521</width>
+      <height>391</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Nächster Wert</string>
+     </attribute>
+     <widget class="QRadioButton" name="radioButton">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>95</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Widerstand</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_2">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>50</y>
+        <width>95</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Kapazität</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_value">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>140</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="calcButton">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>190</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Berechnen</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_prefix">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>140</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>4</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>p</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>n</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>µ</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>m</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>k</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>M</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>G</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_3">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>80</y>
+        <width>95</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Induktivität</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_eRow">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>50</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>5</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>E3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E12</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E24</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E48</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E96</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E192</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_tolerance">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>80</y>
+        <width>71</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>±20%</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>±10%</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>±5%</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>±1%</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_result">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>240</y>
+        <width>181</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string>Result</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Spannungsteiler</string>
+     </attribute>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>522</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuDatei">
+    <property name="title">
+     <string>Datei</string>
+    </property>
+    <addaction name="actionReset"/>
+    <addaction name="actionBeenden"/>
+   </widget>
+   <widget class="QMenu" name="menu_ber">
+    <property name="title">
+     <string>Über</string>
+    </property>
+   </widget>
+   <addaction name="menuDatei"/>
+   <addaction name="menu_ber"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionBeenden">
+   <property name="text">
+    <string>Beenden</string>
+   </property>
+  </action>
+  <action name="actionReset">
+   <property name="text">
+    <string>Zurücksetzen</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
