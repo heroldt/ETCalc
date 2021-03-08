@@ -9,9 +9,18 @@ class MainDialog(QtWidgets.QMainWindow):
         #Slot init
         self.ui.calcButton.clicked.connect(self.onCalcButtonClicked)
         self.ui.action_about.triggered.connect(self.onAboutClicked)
+        self.ui.actionReset.triggered.connect(self.clearAll)
+        self.ui.actionBeenden.triggered.connect(self.quit)
 
     def clearResultField(self):
         self.ui.label_result.clear()
+
+    def clearAll(self):
+        self.clearResultField()
+        self.ui.lineEdit_value.clear()
+
+    def quit(self):
+        QtWidgets.QApplication.quit()
         
     def onCalcButtonClicked(self):
         self.clearResultField()
