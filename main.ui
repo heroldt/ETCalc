@@ -30,7 +30,7 @@
      <attribute name="title">
       <string>Nächster Wert</string>
      </attribute>
-     <widget class="QRadioButton" name="radioButton">
+     <widget class="QRadioButton" name="radioButton_res">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -43,7 +43,7 @@
        <string>Widerstand</string>
       </property>
      </widget>
-     <widget class="QRadioButton" name="radioButton_2">
+     <widget class="QRadioButton" name="radioButton_cap">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -132,7 +132,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QRadioButton" name="radioButton_3">
+     <widget class="QRadioButton" name="radioButton_ind">
       <property name="geometry">
        <rect>
         <x>40</x>

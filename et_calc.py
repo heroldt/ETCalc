@@ -10,7 +10,7 @@ e_rows ={
 
 def normalize(value):
     norm = 0
-    while value > 10:
+    while value >= 10:
         value = value/10
         norm = norm -1
     while value < 1:
