@@ -17,7 +17,7 @@ class MainDialog(QtWidgets.QMainWindow):
         erow = str(self.ui.comboBox_eRow.currentText())
         value = int(self.ui.lineEdit_value.text())
         dev, eval = et_calc.get_closest_erow_value(value,et_calc.e_rows[erow])
-        self.ui.label_result.setText("Nearest Value: %.3f" % (eval))
+        self.ui.label_result.setText("Nearest Value: %.3f (%+.1f%%)" % (eval, (eval/value-1)*100))
 
 app = QtWidgets.QApplication(sys.argv)
 dialog = MainDialog()
