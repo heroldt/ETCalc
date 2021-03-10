@@ -33,7 +33,14 @@ class MainDialog(QtWidgets.QMainWindow):
         elif self.ui.radioButton_cap.isChecked() == True:
             unit += "F"
         erow = str(self.ui.comboBox_eRow.currentText())
-        value = int(self.ui.lineEdit_value.text())
+        try:
+            value = int(self.ui.lineEdit_value.text())
+            if value <= 0:
+                self.ui.label_result.setText("Nur positive Zahlen > 0 erlaubt")
+                return
+        except:
+            self.ui.label_result.setText("Ungültige Eingabe")
+            return
         dev, eval = et_calc.get_closest_erow_value(value,et_calc.e_rows[erow])
         self.ui.label_result.setText("Nächster Wert: %.3f %s (%+.1f%%)" % (eval, unit, (eval/value-1)*100))
 
