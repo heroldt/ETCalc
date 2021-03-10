@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>522</width>
-    <height>452</height>
+    <width>311</width>
+    <height>351</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
      <rect>
       <x>0</x>
       <y>10</y>
-      <width>521</width>
-      <height>391</height>
+      <width>301</width>
+      <height>311</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -41,6 +41,9 @@
       </property>
       <property name="text">
        <string>Widerstand</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
       </property>
      </widget>
      <widget class="QRadioButton" name="radioButton_cap">
@@ -252,7 +255,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>522</width>
+     <width>311</width>
      <height>21</height>
     </rect>
    </property>

@@ -23,11 +23,19 @@ class MainDialog(QtWidgets.QMainWindow):
         QtWidgets.QApplication.quit()
         
     def onCalcButtonClicked(self):
+        unit = ''
         self.clearResultField()
+        unit = str(self.ui.comboBox_prefix.currentText())
+        if self.ui.radioButton_res.isChecked() == True:
+            unit += "\u03A9"
+        elif self.ui.radioButton_ind.isChecked() == True:
+            unit += "H"
+        elif self.ui.radioButton_cap.isChecked() == True:
+            unit += "F"
         erow = str(self.ui.comboBox_eRow.currentText())
         value = int(self.ui.lineEdit_value.text())
         dev, eval = et_calc.get_closest_erow_value(value,et_calc.e_rows[erow])
-        self.ui.label_result.setText("Nearest Value: %.3f (%+.1f%%)" % (eval, (eval/value-1)*100))
+        self.ui.label_result.setText("Nächster Wert: %.3f %s (%+.1f%%)" % (eval, unit, (eval/value-1)*100))
 
     def onAboutClicked(self):
         msgBox = QtWidgets.QMessageBox()
