@@ -7,7 +7,8 @@ class MainDialog(QtWidgets.QMainWindow):
         super().__init__(parent)
         self.ui = uic.loadUi("main.ui", self)
         #Slot init
-        self.ui.calcButton.clicked.connect(self.onCalcButtonClicked)
+        self.ui.calcButton.clicked.connect(self.onCalcButtonClicked)  #Calc Button
+        self.ui.lineEdit_value.returnPressed.connect(self.onCalcButtonClicked) #Press Enter in Input Field
         self.ui.action_about.triggered.connect(self.onAboutClicked)
         self.ui.actionReset.triggered.connect(self.clearAll)
         self.ui.actionBeenden.triggered.connect(self.quit)
