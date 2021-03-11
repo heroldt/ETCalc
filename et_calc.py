@@ -40,9 +40,23 @@ def get_closest_erow_value(value, e_row):
         if cdev < dev:
             dev = cdev
             eval = x
-    return denormalize(dev, norm),denormalize(eval, norm)
+    return denormalize(eval, norm)
+
+def get_second_closest_erow_value(value, e_row):
+    closest = get_closest_erow_value(value, e_row)
+    dev_closest = get_deviation(value,closest)
+    dev = 10
+    eval = 0
+    value, norm = normalize(value)
+    for x in e_row:
+        cdev = get_deviation(value,x)
+        if cdev < dev and dev_closest < cdev:
+            dev = cdev
+            eval = x
+    return denormalize(eval, norm)
 
 if __name__ == "__main__":
     value = 2002
-    dev, eval = get_closest_erow_value(value,e_rows['E96'])
-    print("The deviation from %d is: %.3f. Nearest Value: %f" % (value, dev, eval))
+    eval = get_closest_erow_value(value,e_rows['E96'])
+    seval = get_second_closest_erow_value(value,e_rows['E96'])
+    print("Nearest Value: %f, Second nearest: %f" % (eval, seval))

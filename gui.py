@@ -42,8 +42,9 @@ class MainDialog(QtWidgets.QMainWindow):
         except:
             self.ui.label_result.setText("Ungültige Eingabe")
             return
-        dev, eval = et_calc.get_closest_erow_value(value,et_calc.e_rows[erow])
-        self.ui.label_result.setText("Nächster Wert: %.3f %s (%+.1f%%)" % (eval, unit, (eval/value-1)*100))
+        eval = et_calc.get_closest_erow_value(value,et_calc.e_rows[erow])
+        seval = et_calc.get_second_closest_erow_value(value,et_calc.e_rows[erow])
+        self.ui.label_result.setText("Nächste Werte: \n%.3f %s (%+.1f%%)\n%.3f %s (%+.1f%%)" % (eval, unit, (eval/value-1)*100,seval, unit, (seval/value-1)*100))
 
     def onAboutClicked(self):
         msgBox = QtWidgets.QMessageBox()
