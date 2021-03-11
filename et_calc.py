@@ -44,13 +44,15 @@ def get_closest_erow_value(value, e_row):
 
 def get_second_closest_erow_value(value, e_row):
     closest = get_closest_erow_value(value, e_row)
-    dev_closest = get_deviation(value,closest)
+    nclosest,_ = normalize(closest)
     dev = 10
     eval = 0
     value, norm = normalize(value)
     for x in e_row:
+        if x == nclosest:
+            continue
         cdev = get_deviation(value,x)
-        if cdev < dev and dev_closest < cdev:
+        if cdev < dev:
             dev = cdev
             eval = x
     return denormalize(eval, norm)
