@@ -42,23 +42,28 @@ def get_closest_erow_value(value, e_row):
             eval = x
     return denormalize(eval, norm)
 
-def get_second_closest_erow_value(value, e_row):
-    closest = get_closest_erow_value(value, e_row)
-    nclosest,_ = normalize(closest)
-    dev = 10
-    eval = 0
-    value, norm = normalize(value)
-    for x in e_row:
-        if x == nclosest:
-            continue
-        cdev = get_deviation(value,x)
-        if cdev < dev:
-            dev = cdev
-            eval = x
-    return denormalize(eval, norm)
+def get_closest_erow_values(input_val,cnt,e_row):
+    ninput, norm = normalize(input_val)
+    e_row_list = [] #normalized vals
+    return_list = [] #denormalized vals
+    for i in range(cnt):
+        dev = 10
+        eval = 0
+        for x in e_row:
+            if x in e_row_list:
+                continue
+            cdev = get_deviation(ninput,x)
+            if cdev < dev:
+                dev = cdev
+                eval = x
+        e_row_list.append(eval)
+        return_list.append(denormalize(eval, norm))
+    return return_list
 
 if __name__ == "__main__":
+    #print 5 closest e row vals of 2002
     value = 2002
-    eval = get_closest_erow_value(value,e_rows['E96'])
-    seval = get_second_closest_erow_value(value,e_rows['E96'])
-    print("Nearest Value: %f, Second nearest: %f" % (eval, seval))
+    cnt = 5
+    evals = get_closest_erow_values(value,cnt,e_rows['E96'])
+    for i in range(cnt):
+        print(evals[i])
