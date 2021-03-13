@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>313</width>
-    <height>376</height>
+    <width>363</width>
+    <height>451</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
      <rect>
       <x>0</x>
       <y>10</y>
-      <width>301</width>
-      <height>331</height>
+      <width>351</width>
+      <height>401</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -232,7 +232,7 @@
         <x>40</x>
         <y>240</y>
         <width>401</width>
-        <height>41</height>
+        <height>121</height>
        </rect>
       </property>
       <property name="frameShape">
@@ -240,6 +240,9 @@
       </property>
       <property name="text">
        <string>Result</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
       </property>
      </widget>
     </widget>
@@ -255,8 +258,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>313</width>
-     <height>21</height>
+     <width>363</width>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuDatei">
