@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -250,6 +250,96 @@
      <attribute name="title">
       <string>Spannungsteiler</string>
      </attribute>
+     <widget class="QPushButton" name="calcButton_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>110</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Berechnen</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_value_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>60</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_eRow_2">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>60</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>5</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>E3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E12</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E24</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E48</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E96</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E192</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_result_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>160</y>
+        <width>401</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>Result</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
@@ -259,7 +349,7 @@
      <x>0</x>
      <y>0</y>
      <width>363</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuDatei">

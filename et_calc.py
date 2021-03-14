@@ -60,6 +60,20 @@ def get_closest_erow_values(input_val,cnt,e_row):
         return_list.append(denormalize(eval, norm))
     return return_list
 
+def get_vd_ratio(val1,val2):
+    return val1/(val1+val2)
+    
+def get_vd_closest(ratio,e_row):
+    cdev = 10
+    for x in e_row:
+        for y in e_row:
+            dev = abs(get_vd_ratio(x,y)-ratio)
+            if dev < cdev:
+                cdev = dev
+                erow1 = x
+                erow2 = y
+    return erow1,erow2
+
 if __name__ == "__main__":
     #print 5 closest e row vals of 2002
     value = 2002
@@ -67,3 +81,7 @@ if __name__ == "__main__":
     evals = get_closest_erow_values(value,cnt,e_rows['E96'])
     for i in range(cnt):
         print(evals[i])
+
+    #get the best fitting values for a voltage ratio of 0.36
+    e1,e2 = get_vd_closest(0.36,e_rows['E96'])
+    print(e1,e2)
