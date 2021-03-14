@@ -1,6 +1,5 @@
 import sys
-from types import prepare_class
-from PyQt5 import QtWidgets, uic, QtCore
+from PyQt5 import QtWidgets, uic
 import et_calc
 
 class MainDialog(QtWidgets.QMainWindow):
@@ -43,7 +42,7 @@ class MainDialog(QtWidgets.QMainWindow):
             unit += "F"
         erow = str(self.ui.comboBox_eRow.currentText())
         try:
-            value = int(self.ui.lineEdit_value.text())
+            value = float(self.ui.lineEdit_value.text())
             if value <= 0:
                 self.ui.label_result.setText("Nur positive Zahlen > 0 erlaubt")
                 return
