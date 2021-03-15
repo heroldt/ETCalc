@@ -2,13 +2,34 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>363</width>
-    <height>451</height>
+    <width>300</width>
+    <height>480</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>300</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>300</width>
+    <height>480</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>ET Calc [alpha] (c)2021</string>
@@ -19,16 +40,16 @@
      <rect>
       <x>0</x>
       <y>10</y>
-      <width>351</width>
-      <height>401</height>
+      <width>290</width>
+      <height>430</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
-      <string>Nächster Wert</string>
+      <string>E-Reihe</string>
      </attribute>
      <widget class="QRadioButton" name="radioButton_res">
       <property name="geometry">
@@ -157,8 +178,11 @@
         <height>22</height>
        </rect>
       </property>
+      <property name="currentText">
+       <string>E24</string>
+      </property>
       <property name="currentIndex">
-       <number>5</number>
+       <number>3</number>
       </property>
       <item>
        <property name="text">
@@ -254,7 +278,7 @@
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>110</y>
+        <y>220</y>
         <width>93</width>
         <height>28</height>
        </rect>
@@ -267,7 +291,7 @@
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>60</y>
+        <y>170</y>
         <width>113</width>
         <height>22</height>
        </rect>
@@ -277,13 +301,16 @@
       <property name="geometry">
        <rect>
         <x>160</x>
-        <y>60</y>
+        <y>170</y>
         <width>51</width>
         <height>22</height>
        </rect>
       </property>
+      <property name="currentText">
+       <string>E24</string>
+      </property>
       <property name="currentIndex">
-       <number>5</number>
+       <number>3</number>
       </property>
       <item>
        <property name="text">
@@ -325,8 +352,8 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>160</y>
-        <width>401</width>
+        <y>270</y>
+        <width>261</width>
         <height>121</height>
        </rect>
       </property>
@@ -340,6 +367,19 @@
        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
       </property>
      </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>150</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Teilungsverhältnis</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
@@ -348,7 +388,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>363</width>
+     <width>300</width>
      <height>21</height>
     </rect>
    </property>

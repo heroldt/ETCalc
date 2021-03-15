@@ -42,7 +42,7 @@ class MainDialog(QtWidgets.QMainWindow):
             unit += "F"
         erow = str(self.ui.comboBox_eRow.currentText())
         try:
-            value = float(self.ui.lineEdit_value.text())
+            value = float(self.ui.lineEdit_value.text().replace(',','.'))
             if value <= 0:
                 self.ui.label_result.setText("Nur positive Zahlen > 0 erlaubt")
                 return
@@ -55,7 +55,7 @@ class MainDialog(QtWidgets.QMainWindow):
     def OnVDCalcButtonClicked(self):
         self.ui.label_result_2.clear()
         try:
-            value = float(self.ui.lineEdit_value_2.text())
+            value = float(self.ui.lineEdit_value_2.text().replace(',','.'))
             if value < 0 or value > 1:
                 self.ui.label_result_2.setText("Gültiger Wertebereich: 0..1")
                 return
@@ -64,7 +64,7 @@ class MainDialog(QtWidgets.QMainWindow):
             return
         erow = str(self.ui.comboBox_eRow_2.currentText())
         e1,e2 = et_calc.get_vd_closest(value,et_calc.e_rows[erow])
-        self.ui.label_result_2.setText("Nächste Werte: \n%.3f \n%.3f" % (e1, e2))
+        self.ui.label_result_2.setText("Nächste Werte: \nR1: %.3f \nR2: %.3f \nTeilungsverhältnis: %.3f (%+.1f%%)" % (e1, e2, et_calc.get_vd_ratio(e1,e2),(et_calc.get_vd_ratio(e1,e2)/value-1)*100))
 
     def onAboutClicked(self):
         msgBox = QtWidgets.QMessageBox()
