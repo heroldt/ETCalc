@@ -45,7 +45,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -278,7 +278,7 @@
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>220</y>
+        <y>240</y>
         <width>93</width>
         <height>28</height>
        </rect>
@@ -291,7 +291,7 @@
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>170</y>
+        <y>190</y>
         <width>113</width>
         <height>22</height>
        </rect>
@@ -301,7 +301,7 @@
       <property name="geometry">
        <rect>
         <x>160</x>
-        <y>170</y>
+        <y>190</y>
         <width>51</width>
         <height>22</height>
        </rect>
@@ -351,10 +351,10 @@
      <widget class="QLabel" name="label_result_2">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>270</y>
-        <width>261</width>
-        <height>121</height>
+        <x>30</x>
+        <y>280</y>
+        <width>221</width>
+        <height>111</height>
        </rect>
       </property>
       <property name="frameShape">
@@ -371,13 +371,32 @@
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>150</y>
-        <width>101</width>
+        <y>170</y>
+        <width>161</width>
         <height>16</height>
        </rect>
       </property>
       <property name="text">
-       <string>Teilungsverhältnis</string>
+       <string>Teilungsverhältnis R2/(R1+R2)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>10</y>
+        <width>121</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>res/voltage_divider.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
       </property>
      </widget>
     </widget>

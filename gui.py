@@ -64,7 +64,7 @@ class MainDialog(QtWidgets.QMainWindow):
             return
         erow = str(self.ui.comboBox_eRow_2.currentText())
         e1,e2 = et_calc.get_vd_closest(value,et_calc.e_rows[erow])
-        self.ui.label_result_2.setText("Nächste Werte: \nR1: %.3f \nR2: %.3f \nTeilungsverhältnis: %.3f (%+.1f%%)" % (e1, e2, et_calc.get_vd_ratio(e1,e2),(et_calc.get_vd_ratio(e1,e2)/value-1)*100))
+        self.ui.label_result_2.setText("Nächste Werte: \nR2: %.0f \u03A9 \nR1: %.0f \u03A9 \nTeilungsverhältnis: %.3f (%+.1f%%)" % (e1*100, e2*100, et_calc.get_vd_ratio(e1,e2),(et_calc.get_vd_ratio(e1,e2)/value-1)*100))
 
     def onAboutClicked(self):
         msgBox = QtWidgets.QMessageBox()
